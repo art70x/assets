@@ -1,0 +1,57 @@
+:root {
+  --h: 240;
+  --s: 20%;
+
+  /* Page background */
+  --l-bg: 96%;
+  /* Borders */
+  --l-border: 44%;
+  /* Text */
+  --l-text: 12%;
+  /* Primary button */
+  --l-btn: 60%;
+  /* Button hover */
+  --l-btn-hover: 52%;
+  /* Button shadow */
+  --l-shadow: 72%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition-property: background, border, color, transform;
+  transition-duration: var(--d, 300ms);
+  transition-timing-function: var(--e, 300ms);
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  color: hsl(var(--h), var(--s), var(--l-text));
+  font-family: Roboto, "Segoe UI", sans-serif;
+  background: hsl(var(--h), var(--s), var(--l-bg));
+}
+
+.btn {
+  display: inline-flex;
+  padding: 6px 12px;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--h), var(--s), var(--l-text));
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.25rem;
+  background-color: hsl(var(--h), var(--s), var(--l-btn));
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 0 6px hsl(var(--h), var(--s), var(--l-shadow));
+  transition: all var(--d, 180ms) var(--e, ease);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(var(--h), var(--s), var(--l-btn-hover));
+  box-shadow: 0 0 8px hsl(var(--h), var(--s), var(--l-shadow));
+}
