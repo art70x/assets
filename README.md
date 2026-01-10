@@ -1,0 +1,2 @@
+# assets
+Global Assets
